@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'dashboard');
+Route::view('/', 'dashboard')
+    ->middleware(['auth', 'verified']);
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
